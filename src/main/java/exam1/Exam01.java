@@ -18,6 +18,11 @@ public class Exam01 {
     }
 
     public String getScore() {
+
+        if(countA == countB && countA == 1) return "Fifteen-All";
+        else if(countA == countB && countA == 2) return "Thirty-All";
+        else if(countA == countB && countA == 3) return "Deuce";
+
         if(countA == 1) return "Fifteen-Love";
         else if(countA == 2) return "Thirty-Love";
         else if(countA == 3) return "Forty-Love";
@@ -27,6 +32,8 @@ public class Exam01 {
         else if(countB == 2) return "Love-Thirty";
         else if(countB == 3) return "Love-Forty";
         else if(countB == 4) return "Win for Player B";
+
+
 
         return "Love-All";
     }
