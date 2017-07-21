@@ -22,13 +22,16 @@ public class Exam01 {
         String scoreA = "Love";
         String scoreB = "Love";
 
+        if(countA - countB == 1 && countA >= 4) return "Advantage Player A";
+        else if(countB - countA == 1 && countB >= 4) return "Advantage Player B";
+
+        if(countA - countB == 2 && countA >= 4) return "Win for Player A";
+        else if(countB - countA == 2 && countB >= 4) return "Win for Player B";
+
         if(countA == countB && countA == 0) return "Love-All";
         else if(countA == countB && countA == 1) return "Fifteen-All";
         else if(countA == countB && countA == 2) return "Thirty-All";
         else if(countA == countB && countA >= 3) return "Deuce";
-
-        if(countA - countB == 1) return "Advantage Player A";
-        else if(countB - countA == 1) return "Advantage Player B";
 
         if(countA == 1) scoreA = "Fifteen";
         else if(countA == 2) scoreA = "Thirty";
