@@ -17,7 +17,7 @@ public class Exam01 {
 
     public String getScore() {
         if(countA == 1) return "Fifteen-Love";
+        else if(countA == 2) return "Thirty-Love";
         return "Love-All";
     }
-
 }
