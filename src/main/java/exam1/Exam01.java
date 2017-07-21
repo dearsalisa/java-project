@@ -19,6 +19,7 @@ public class Exam01 {
         if(countA == 1) return "Fifteen-Love";
         else if(countA == 2) return "Thirty-Love";
         else if(countA == 3) return "Forty-Love";
+        else if(countA == 4) return "Win for Player A";
         return "Love-All";
     }
 }
