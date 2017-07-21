@@ -19,10 +19,10 @@ public class Exam01 {
 
     public String convertScoreToString(int score) {
         if(score == 0) return "Love";
-        else if(score == 1) return "Fifteen";
-        else if(score == 2) return "Thirty";
-        else if(score == 3) return "Forty";
-        else return "";
+        if(score == 1) return "Fifteen";
+        if(score == 2) return "Thirty";
+        if(score == 3) return "Forty";
+        return "";
     }
 
     public String getScore() {
@@ -30,11 +30,15 @@ public class Exam01 {
         String scoreA = convertScoreToString(countA);
         String scoreB = convertScoreToString(countB);
 
-        if(countA - countB == 1 && countA >= 4) return "Advantage Player A";
-        if(countB - countA == 1 && countB >= 4) return "Advantage Player B";
+        if(countA > 3) {
+            if(countA - countB == 1) return "Advantage Player A";
+            if(countA - countB >= 2) return "Win for Player A";
+        }
 
-        if(countA - countB >= 2 && countA >= 4) return "Win for Player A";
-        if(countB - countA >= 2 && countB >= 4) return "Win for Player B";
+        if(countB > 3) {
+            if(countB - countA == 1) return "Advantage Player B";
+            if(countB - countA >= 2) return "Win for Player B";
+        }
 
         if(countA == countB) {
             if(countA >= 3) return "Deuce";
