@@ -19,15 +19,16 @@ public class Exam01 {
 
     public String getScore() {
 
-        String scoreA = "";
-        String scoreB = "";
+        String scoreA = "Love";
+        String scoreB = "Love";
 
         if(countA == countB && countA == 0) return "Love-All";
         else if(countA == countB && countA == 1) return "Fifteen-All";
         else if(countA == countB && countA == 2) return "Thirty-All";
         else if(countA == countB && countA >= 3) return "Deuce";
 
-
+        if(countA - countB == 1) return "Advantage Player A";
+        else if(countB - countA == 1) return "Advantage Player B";
 
         if(countA == 1) scoreA = "Fifteen";
         else if(countA == 2) scoreA = "Thirty";
