@@ -33,7 +33,7 @@ public class Exam01 {
     }
 
     public boolean isAdvantage() {
-        return (countA >= 3 && countB >= 3 && Math.abs(countA - countB) == 1);
+        return (Math.abs(countA - countB) == 1);
     }
 
     public boolean isWin() {
@@ -51,7 +51,7 @@ public class Exam01 {
         } else if (isDeuce()) {
             return "Deuce";
         } else if (isAdvantage()) {
-            String advantagePlayer = "";
+            String advantagePlayer;
             if (countA > countB) {
                 advantagePlayer = playerA;
             } else {
@@ -59,7 +59,7 @@ public class Exam01 {
             }
             return String.format("Advantage %s", advantagePlayer);
         } else if (isWin()) {
-            String winPlayer = "";
+            String winPlayer;
             if (countA > countB) {
                 winPlayer = playerA;
             } else {
