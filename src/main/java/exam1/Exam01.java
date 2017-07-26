@@ -20,6 +20,11 @@ public class Exam01 {
         countB++;
     }
 
+    public String compareScore() {
+        if(countA > countB) return playerA;
+        else return playerB;
+    }
+
     public String getScore() {
 
         String[] score = {"Love", "Fifteen", "Thirty", "Forty"};
@@ -31,21 +36,9 @@ public class Exam01 {
         } else if (isDeuce()) {
             return "Deuce";
         } else if (isAdvantage()) {
-            String advantagePlayer;
-            if (countA > countB) {
-                advantagePlayer = playerA;
-            } else {
-                advantagePlayer = playerB;
-            }
-            return String.format("Advantage %s", advantagePlayer);
+            return String.format("Advantage %s", compareScore());
         } else if (isWin()) {
-            String winPlayer;
-            if (countA > countB) {
-                winPlayer = playerA;
-            } else {
-                winPlayer = playerB;
-            }
-            return String.format("Win for %s", winPlayer);
+            return String.format("Win for %s", compareScore());
         } else return "Invalid Input";
     }
 
