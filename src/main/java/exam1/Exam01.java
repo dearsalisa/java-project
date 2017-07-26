@@ -20,26 +20,6 @@ public class Exam01 {
         countB++;
     }
 
-    public boolean isEqualScore() {
-        return (countA == countB && countA <= 2);
-    }
-
-    public boolean isNormalScore() {
-        return (countA != countB && countA <= 3 && countB <= 3);
-    }
-
-    public boolean isDeuce() {
-        return (countA == countB && countA >= 3);
-    }
-
-    public boolean isAdvantage() {
-        return (Math.abs(countA - countB) == 1);
-    }
-
-    public boolean isWin() {
-        return (Math.abs(countA - countB) >= 2);
-    }
-
     public String getScore() {
 
         String[] score = {"Love", "Fifteen", "Thirty", "Forty"};
@@ -68,4 +48,25 @@ public class Exam01 {
             return String.format("Win for %s", winPlayer);
         } else return "Invalid Input";
     }
+
+    public boolean isEqualScore() {
+        return (countA == countB && countA <= 2);
+    }
+
+    public boolean isNormalScore() {
+        return (countA != countB && countA <= 3 && countB <= 3);
+    }
+
+    public boolean isDeuce() {
+        return (countA == countB && countA >= 3);
+    }
+
+    public boolean isAdvantage() {
+        return (Math.abs(countA - countB) == 1);
+    }
+
+    public boolean isWin() {
+        return (Math.abs(countA - countB) >= 2);
+    }
+
 }
